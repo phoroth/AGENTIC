@@ -14,7 +14,7 @@
   <a href="https://github.com/phoroth/AGENTIC/stargazers"><img src="https://img.shields.io/github/stars/phoroth/AGENTIC?style=for-the-badge&logo=github&color=gold" alt="Stars" /></a>
   <a href="https://github.com/phoroth/AGENTIC/network/members"><img src="https://img.shields.io/github/forks/phoroth/AGENTIC?style=for-the-badge&logo=github&color=blue" alt="Forks" /></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge" alt="MIT License" /></a>
-  <img src="https://img.shields.io/badge/Skills-1000%2B-orange?style=for-the-badge&logo=powerpages" alt="1000+ Skills" />
+  <img src="https://img.shields.io/badge/Skills-1590%2B-orange?style=for-the-badge&logo=powerpages" alt="1590+ Skills" />
   <img src="https://img.shields.io/badge/Harness-Universal-purple?style=for-the-badge&logo=gnubash" alt="Universal Harness" />
 </p>
 
@@ -49,7 +49,7 @@ Instead of rebuilding workflows in every prompt or losing state when context dep
 | Without AGENTIC | With AGENTIC |
 | :--- | :--- |
 | **Context Amnesia**: Agents lose state when token limits are reached. | **Graphify Memory**: Universal knowledge graph (`graph.json`) persists decisions across model handoffs. |
-| **Ad-Hoc Prompting**: Model forgets guidelines halfway through a task. | **1,000+ Production Skills**: Enforces strict domain rules (Bio, Chem, Finance, Security, Full-Stack). |
+| **Ad-Hoc Prompting**: Model forgets guidelines halfway through a task. | **1,590+ Production Skills**: Enforces strict domain rules (Bio, Chem, Finance, Security, Full-Stack). |
 | **Invisible Decisions**: Architecture choices disappear into long chats. | **Obsidian Vault Sync**: Auto-maps plans & dependency trees visually into Obsidian. |
 | **Single-Model Lock**: Stuck using one vendor's CLI harness. | **Universal Parity**: Works seamlessly across Antigravity, Claude Code, OpenCode, and Codex. |
 | **Unchecked Code**: Code generated without verification gates. | **Safety & Verification**: Built-in AST checks, linting, regression testing, and security scanning. |
@@ -60,7 +60,7 @@ Instead of rebuilding workflows in every prompt or losing state when context dep
 
 | Component | Count | Description |
 | :--- | ---: | :--- |
-| **Specialized Skills** | **1,000+ Skills** | TDD, security audits, database tuning, genomics, trading systems, UI design, performance engineering |
+| **Specialized Skills** | **1,590+ Skills** | TDD, security audits, database tuning, genomics, trading systems, UI design, performance engineering |
 | **Agent Squads** | **64 Subagents** | Scoped workers for architectural planning, code reviews, build repair, and refactoring |
 | **Shared Memory Engine** | **Graphify v2** | Knowledge graph engine enabling token-agnostic baton passing between LLMs |
 | **Visual Architecture** | **Obsidian Vault** | Automated sync of implementation plans & task graphs to local Obsidian vaults |
@@ -151,7 +151,7 @@ sequenceDiagram
 
 | Feature | Antigravity | Claude Code | OpenCode | Codex | Cursor |
 | :--- | :---: | :---: | :---: | :---: | :---: |
-| **1,000+ Skill Vault** | ✅ Full | ✅ Full | ✅ Full | ✅ Full | ✅ Full |
+| **1,590+ Skill Vault** | ✅ Full | ✅ Full | ✅ Full | ✅ Full | ✅ Full |
 | **Graphify Shared Memory** | ✅ Native | ✅ Native | ✅ Native | ✅ Native | ✅ Native |
 | **Obsidian Vault Sync** | ✅ Native | ✅ Native | ✅ Native | ✅ Native | ✅ Native |
 | **Subagent Delegation** | ✅ 64 Squads | ✅ 64 Squads | ✅ 12 Squads | ✅ AGENTS.md | ✅ Scoped |
@@ -169,7 +169,8 @@ AGENTIC/
 ├── .codex/                 # Codex reference roles and configs
 ├── .opencode/              # OpenCode plugin, rules, and commands
 ├── agents/                 # 64 specialized subagent profiles
-├── skills/                 # 1,000+ domain-specific skills (code, bio, finance, design)
+├── AGENTS.md               # AI agent installation & discovery guide
+├── skills/                 # 1,590+ domain-specific skills (code, bio, finance, design)
 ├── commands/               # 84 slash-command shims
 ├── graphify/               # Knowledge graph memory engine scripts
 ├── obsidian-vault/         # Obsidian sync adapters & templates
