@@ -1,6 +1,6 @@
 ---
 name: cc-skill-continuous-learning
-description: "Development skill from everything-claude-code"
+description: "Development skill from AGENTIC (https://github.com/phoroth/AGENTIC)"
 risk: none
 source: community
 date_added: "2026-02-27"
