@@ -209,27 +209,49 @@ Delegate architectural planning to the planner subagent for adding multi-tenant 
 
 ## 🧠 Architecture: Token-Agnostic Handoff Protocol (TAHP)
 
-When executing large engineering projects, LLM context windows eventually exhaust. **AGENTIC** solves this with **TAHP**:
+When executing large engineering projects across multiple sessions or different LLMs, context windows eventually exhaust. **AGENTIC** solves this with the **Token-Agnostic Handoff Protocol (TAHP)** powered by `graphify-memory`.
 
 ```mermaid
 sequenceDiagram
     autonumber
     participant Antigravity as Antigravity (Gemini 3.1 Pro)
-    participant Graph as Shared Graph Memory (graph.json)
-    participant Claude as Claude Code (Sonnet 3.5)
-    participant Obsidian as Obsidian Vault
+    participant Graph as Shared Memory Graph (graphify-out/graph.json)
+    participant Claude as Claude Code / OpenCode / Codex
+    participant Obsidian as Obsidian Graph Vault
 
-    Antigravity->>Antigravity: Executes Task & Generates Plan
-    Antigravity->>Graph: Writes state summary & decisions via `graphify insert`
-    Antigravity->>Obsidian: Syncs task nodes via `obsidian-vault-sync`
-    Note over Antigravity, Claude: Context limit reached / Agent switch
-    Claude->>Graph: Queries current state via `graphify query`
+    Antigravity->>Antigravity: Executes Task & Generates Implementation Plan
+    Antigravity->>Graph: Writes state, invariants & decisions (`graphify insert`)
+    Antigravity->>Obsidian: Syncs living task nodes (`obsidian-vault-sync`)
+    Note over Antigravity, Claude: Context window resets / Model handoff
+    Claude->>Graph: Queries current state (`graphify query "topic"`)
     Claude->>Claude: Continues execution with 100% historical context continuity
 ```
 
-1. **State Persistence**: Before context resets or when switching models/agents, the active agent saves decisions and entities to `.agent/graphify-out/graph.json`.
-2. **Context Recovery**: The incoming agent queries the graph at startup to immediately acquire complete situational awareness.
-3. **Zero Lost Work**: Dead ends, attempted fixes, and invariants remain permanently indexed.
+### Key Principles of TAHP
+
+1. **State Persistence (`graphify-out/graph.json`)**:
+   - Before a context window resets or when switching between agents/models, the active agent serializes all architectural decisions, entity relations, and completed steps to `graphify-out/graph.json`.
+   ```bash
+   graphify insert --node "AuthModule" --relation "uses" --target "OAuth2" --graph graphify-out/graph.json
+   ```
+
+2. **Context Recovery & Querying**:
+   - The incoming agent queries the knowledge graph at startup to acquire immediate situational awareness without re-reading thousands of lines of chat history:
+   ```bash
+   # Query specific topic decisions
+   graphify query "OAuth2" --graph graphify-out/graph.json
+
+   # Trace structural paths between concepts
+   graphify path "AuthModule" "DatabaseSchema" --graph graphify-out/graph.json
+
+   # Explain historical rationale behind a decision
+   graphify explain "JWT Expiration Policy" --graph graphify-out/graph.json
+   ```
+
+3. **Core Memory Rules**:
+   - **Rule 1**: *The context window is ephemeral; disk is eternal.*
+   - **Rule 2**: *Every architectural decision, new pattern, or non-obvious bug fix MUST be recorded into `graphify-out/graph.json` before ending a session.*
+   - **Rule 3**: *Incoming agents MUST query the memory graph before modifying core interfaces or refactoring pre-existing architecture.*
 
 ---
 
