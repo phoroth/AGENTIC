@@ -1,7 +1,7 @@
 {
-  "name": "ecc",
+  "name": "agentic",
   "version": "2.0.0",
-  "description": "Harness-native ECC workflows for Codex: shared skills, production-ready MCP configs, and selective-install-aligned conventions for TDD, security scanning, code review, and autonomous development.",
+  "description": "Harness-native AGENTIC workflows: shared skills, production-ready MCP configs, and selective-install-aligned conventions for TDD, security scanning, code review, and autonomous development.",
   "author": {
     "name": "phoroth",
     "email": "phoroth@users.noreply.github.com",
@@ -14,9 +14,9 @@
   "skills": "./skills/",
   "mcpServers": "./.mcp.json",
   "interface": {
-    "displayName": "ECC",
-    "shortDescription": "249 ECC skills plus MCP configs for TDD, security, code review, and autonomous development.",
-    "longDescription": "ECC is a harness-native operator system for Codex and adjacent agent harnesses. It packages reusable skills, MCP configs, TDD workflows, security scanning, code review, architecture decisions, operator workflows, and release gates in one installable plugin.",
+    "displayName": "AGENTIC",
+    "shortDescription": "249 AGENTIC skills plus MCP configs for TDD, security, code review, and autonomous development.",
+    "longDescription": "AGENTIC is a harness-native operator system for AI agent harnesses. It packages reusable skills, MCP configs, TDD workflows, security scanning, code review, architecture decisions, operator workflows, and release gates in one installable plugin.",
     "developerName": "phoroth",
     "category": "Coding",
     "capabilities": ["Interactive", "Read", "Write"],
