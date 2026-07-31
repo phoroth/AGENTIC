@@ -64,8 +64,21 @@ Instead of rebuilding workflows in every prompt or losing state when context dep
 | **Agent Squads** | **64 Subagents** | Scoped workers for architectural planning, code reviews, build repair, and refactoring |
 | **Shared Memory Engine** | **Graphify v2** | Knowledge graph engine enabling token-agnostic baton passing between LLMs |
 | **Visual Architecture** | **Obsidian Vault** | Automated sync of implementation plans & task graphs to local Obsidian vaults |
-| **Slash Commands** | **84 Commands** | Fast-path shortcuts (`/ecc:plan`, `/build-fix`, `/code-review`, `/security-scan`) |
+| **Slash Commands** | **84 Commands** | Fast-path shortcuts (`/plan`, `/build-fix`, `/code-review`, `/security-scan`) |
 | **Security Scanning** | **AgentShield** | Pre-commit security scanner auditing prompt surface, credentials, and tool permissions |
+
+---
+
+## 🔌 Included Plugin Bundles
+
+| Plugin | Path | Description |
+| :--- | :--- | :--- |
+| **Android CLI** | `plugins/android-cli-plugin` | Android project creation, deployment, SDK management & diagnostics |
+| **Chrome DevTools** | `plugins/chrome-devtools-plugin` | Browser automation, visual testing, DOM inspection & devtools debugging |
+| **AGENTIC Core** | `plugins/ecc` | 67 subagents, 277 core skills, TDD workflows & code review gates |
+| **Firebase Tools** | `plugins/firebase` | Firestore, Firebase Auth, Cloud Functions & hosting deployment workflows |
+| **Science & Biotech** | `plugins/science` | PubMed, ChEMBL, AlphaFold, ClinicalTrials & ENCODE database integrations |
+| **Modern Web Guidance** | `plugins/modern-web-guidance-plugin` | Next.js, React 19, Tailwind v4, Vite & performance optimization guidelines |
 
 ---
 
@@ -111,13 +124,36 @@ bash scripts/sync-agentic-to-codex.sh
 
 | What You Are Doing | Workflow / Command | What Agent / Skill Does |
 | :--- | :--- | :--- |
-| **Planning a New Feature** | `/ecc:plan "Add OAuth2 Auth"` | `planner` agent generates structured blueprint and risk assessment |
+| **Planning a New Feature** | `/plan "Add OAuth2 Auth"` | `planner` agent generates structured blueprint and risk assessment |
 | **Test-Driven Feature Build** | `tdd-workflow` | Enforces RED-GREEN-REFACTOR cycle with 80%+ test coverage gate |
 | **Code Review & Quality Check**| `/code-review` | `code-reviewer` performs fresh-context regression & security pass |
 | **Fixing Broken Build** | `/build-fix` | `build-error-resolver` minimally repairs compiler & type errors |
 | **Querying Project Memory** | `graphify query "auth rules"` | Retrieves past architectural choices & decisions from `graph.json` |
 | **Visualizing System State** | `obsidian-vault-sync` | Formats current `implementation_plan.md` into an Obsidian graph node |
 | **Auditing Security & Secrets** | `/security-scan` | `security-reviewer` audits inputs, secrets, and OWASP vulnerabilities |
+
+---
+
+## 📖 How to Use Skills & Plugins
+
+Once installed via the one-line installer, your AI agent automatically gains access to all 1,590+ skills and 5 plugin bundles:
+
+1. **Automatic Triggering**:
+   - Skills auto-activate based on your task. For example, if you ask your agent to write a React component, query PubMed, or tune PostgreSQL, the matching skill in `skills/` is loaded automatically into context.
+
+2. **Explicit Skill Invocation**:
+   - You can explicitly prompt your agent to use a specific skill:
+     ```text
+     Use the tdd-workflow skill to implement the auth module.
+     Use the security-review skill to scan this PR.
+     ```
+
+3. **Subagent Delegation**:
+   - Invoke specialized subagents for complex tasks:
+     ```text
+     Delegate architectural design to the planner subagent.
+     Run code-reviewer on the latest commit.
+     ```
 
 ---
 
