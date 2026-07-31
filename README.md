@@ -1,13 +1,6 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/phoroth/AGENTIC/main/assets/hero.png" alt="AGENTIC - Universal AI Agent OS" width="100%" error="this.style.display='none'" />
-</p>
-
-<p align="center">
-  <strong>Language:</strong>
-  <a href="README.md">English</a> |
-  <a href="docs/zh-CN/README.md">简体中文</a> |
-  <a href="docs/es/README.md">Español</a> |
-  <a href="docs/ja/README.md">日本語</a>
+  <h1 align="center">AGENTIC</h1>
+  <p align="center"><strong>Universal AI Agent Operating System & 1,590+ Skill Vault</strong></p>
 </p>
 
 <p align="center">
@@ -15,7 +8,9 @@
   <a href="https://github.com/phoroth/AGENTIC/network/members"><img src="https://img.shields.io/github/forks/phoroth/AGENTIC?style=for-the-badge&logo=github&color=blue" alt="Forks" /></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge" alt="MIT License" /></a>
   <img src="https://img.shields.io/badge/Skills-1590%2B-orange?style=for-the-badge&logo=powerpages" alt="1590+ Skills" />
-  <img src="https://img.shields.io/badge/Harness-Universal-purple?style=for-the-badge&logo=gnubash" alt="Universal Harness" />
+  <img src="https://img.shields.io/badge/Plugins-5%20Bundles-blueviolet?style=for-the-badge&logo=package" alt="5 Plugins" />
+  <img src="https://img.shields.io/badge/Subagents-67%20Squads-purple?style=for-the-badge&logo=probot" alt="67 Subagents" />
+  <img src="https://img.shields.io/badge/Harness-Universal-green?style=for-the-badge&logo=gnubash" alt="Universal Harness" />
 </p>
 
 <p align="center">
@@ -30,29 +25,40 @@
 
 ---
 
-# AGENTIC
+> **Optimize the context window. Persist state across model handoffs. Enforce enterprise engineering discipline.**
 
-> **Optimize the context window. Persist everything else.**
-
-Your AI agent can generate code snippets, but **AGENTIC** gives it an enterprise-grade autonomous engineering operating system: it plans before it builds, enforces test-driven development (TDD), runs cross-context code reviews, maintains a token-agnostic knowledge graph, and syncs living architecture maps into Obsidian.
+**AGENTIC** provides a complete autonomous AI engineering operating system. It equips your AI agents (**Gemini Antigravity**, **Claude Code**, **OpenCode**, **Codex**, **Cursor**, and **Zed**) with over **1,590+ specialized domain skills**, **67 subagent squads**, **5 plugin bundles**, continuous memory persistence (**Graphify v2**), test-driven development (TDD) gates, security scanners (**AgentShield**), and living architecture visualizers (**Obsidian Vault Sync**).
 
 ```text
 plan ➔ test ➔ implement ➔ review ➔ verify ➔ graphify ➔ sync ➔ evolve
 ```
 
-Instead of rebuilding workflows in every prompt or losing state when context depletes, install **AGENTIC** once and give your agents persistent execution memory across **Gemini Antigravity**, **Claude Code**, **OpenCode**, **Codex**, **Cursor**, and **Zed**.
+---
+
+## 📚 Table of Contents
+
+1. [💡 Why Choose AGENTIC?](#-why-choose-agentic)
+2. [📦 What's Included](#-whats-included)
+3. [🔌 Included Plugin Bundles](#-included-plugin-bundles)
+4. [⚡ Quick Start & Installation](#-quick-start--installation)
+5. [📖 Complete Guide & Daily Workflows](#-complete-guide--daily-workflows)
+6. [🧠 Architecture: Token-Agnostic Handoff Protocol (TAHP)](#-architecture-token-agnostic-handoff-protocol-tahp)
+7. [🛡️ Security, Governance & AgentShield](#%EF%B8%8F-security-governance--agentshield)
+8. [🛠️ Cross-Harness Parity Matrix](#%EF%B8%8F-cross-harness-parity-matrix)
+9. [📂 Repository Structure](#-repository-structure)
+10. [🤝 Contributing & License](#-contributing--license)
 
 ---
 
 ## 💡 Why Choose AGENTIC?
 
-| Without AGENTIC | With AGENTIC |
+| Challenge Without AGENTIC | Power With AGENTIC |
 | :--- | :--- |
-| **Context Amnesia**: Agents lose state when token limits are reached. | **Graphify Memory**: Universal knowledge graph (`graph.json`) persists decisions across model handoffs. |
-| **Ad-Hoc Prompting**: Model forgets guidelines halfway through a task. | **1,590+ Production Skills**: Enforces strict domain rules (Bio, Chem, Finance, Security, Full-Stack). |
-| **Invisible Decisions**: Architecture choices disappear into long chats. | **Obsidian Vault Sync**: Auto-maps plans & dependency trees visually into Obsidian. |
-| **Single-Model Lock**: Stuck using one vendor's CLI harness. | **Universal Parity**: Works seamlessly across Antigravity, Claude Code, OpenCode, and Codex. |
-| **Unchecked Code**: Code generated without verification gates. | **Safety & Verification**: Built-in AST checks, linting, regression testing, and security scanning. |
+| **Context Amnesia**: Agents lose state when token limits are reached. | **Graphify Memory Engine**: Universal knowledge graph (`graph.json`) persists decisions and state across resets. |
+| **Ad-Hoc Prompting**: Model forgets guidelines halfway through a task. | **1,590+ Domain Skills**: Enforces strict rules for Full-Stack, Bio, Chem, Finance, Security, and MLOps. |
+| **Invisible Decisions**: Architecture choices disappear into long chats. | **Obsidian Vault Sync**: Auto-maps implementation plans & dependency trees visually into local Obsidian vaults. |
+| **Single-Model Lock**: Stuck using one vendor's CLI harness. | **Universal Parity**: Works seamlessly across Antigravity, Claude Code, OpenCode, Codex, and Cursor. |
+| **Unchecked Code**: Code generated without verification gates. | **Safety & Verification**: Built-in AST checks, linting, regression testing, and AgentShield security scanning. |
 
 ---
 
@@ -60,31 +66,34 @@ Instead of rebuilding workflows in every prompt or losing state when context dep
 
 | Component | Count | Description |
 | :--- | ---: | :--- |
-| **Specialized Skills** | **1,590+ Skills** | TDD, security audits, database tuning, genomics, trading systems, UI design, performance engineering |
-| **Agent Squads** | **64 Subagents** | Scoped workers for architectural planning, code reviews, build repair, and refactoring |
+| **Specialized Skills** | **1,590+ Skills** | TDD, security audits, database tuning, genomics, trading systems, UI design, performance engineering, cloud infrastructure, AI/ML pipelines |
+| **Subagent Squads** | **67 Subagents** | Scoped workers for architectural planning (`planner`), code reviews (`code-reviewer`), build repair (`build-error-resolver`), database optimization (`database-reviewer`), etc. |
+| **Plugin Bundles** | **5 Plugins** | Modular plugin bundles for Android CLI, Science tools, DevTools, Firebase, Web Guidance, and AGENTIC Core |
 | **Shared Memory Engine** | **Graphify v2** | Knowledge graph engine enabling token-agnostic baton passing between LLMs |
 | **Visual Architecture** | **Obsidian Vault** | Automated sync of implementation plans & task graphs to local Obsidian vaults |
-| **Slash Commands** | **84 Commands** | Fast-path shortcuts (`/plan`, `/build-fix`, `/code-review`, `/security-scan`) |
+| **Slash Commands** | **93 Commands** | Fast-path shortcuts (`/plan`, `/build-fix`, `/code-review`, `/security-scan`) |
 | **Security Scanning** | **AgentShield** | Pre-commit security scanner auditing prompt surface, credentials, and tool permissions |
 
 ---
 
 ## 🔌 Included Plugin Bundles
 
-| Plugin | Path | Description |
+| Plugin | Directory Path | Key Capabilities & Features |
 | :--- | :--- | :--- |
-| **Android CLI** | `plugins/android-cli-plugin` | Android project creation, deployment, SDK management & diagnostics |
-| **Chrome DevTools** | `plugins/chrome-devtools-plugin` | Browser automation, visual testing, DOM inspection & devtools debugging |
-| **AGENTIC Core** | `plugins/ecc` | 67 subagents, 277 core skills, TDD workflows & code review gates |
+| **AGENTIC Core** | `plugins/ecc` | 67 subagents, 277 core skills, 93 slash commands, TDD workflows, verification loops & code review gates |
+| **Science & Biotech** | `plugins/science` | PubMed, ChEMBL, AlphaFold, ClinicalTrials, ENCODE, dbSNP, GTEx & UniProt database integrations |
+| **Android CLI** | `plugins/android-cli-plugin` | Android project creation, deployment, SDK management, ADB UI testing & environment diagnostics |
+| **Chrome DevTools** | `plugins/chrome-devtools-plugin` | Browser automation, visual testing, DOM inspection & devtools performance debugging |
 | **Firebase Tools** | `plugins/firebase` | Firestore, Firebase Auth, Cloud Functions & hosting deployment workflows |
-| **Science & Biotech** | `plugins/science` | PubMed, ChEMBL, AlphaFold, ClinicalTrials & ENCODE database integrations |
-| **Modern Web Guidance** | `plugins/modern-web-guidance-plugin` | Next.js, React 19, Tailwind v4, Vite & performance optimization guidelines |
+| **Modern Web Guidance** | `plugins/modern-web-guidance-plugin` | Next.js App Router, React 19, Tailwind v4, Vite, Web Vitals & performance optimization guidelines |
 
 ---
 
 ## ⚡ Quick Start & Installation
 
 ### Option 1: Universal One-Line Installer (Recommended)
+
+Installs AGENTIC skills and plugins across all detected AI agent configuration paths on your machine (**Gemini Antigravity**, **Claude Code**, **OpenCode**, **Codex**, and **Cursor**).
 
 #### Windows (PowerShell)
 ```powershell
@@ -98,68 +107,44 @@ curl -fsSL https://raw.githubusercontent.com/phoroth/AGENTIC/main/install.sh | b
 
 ---
 
-### Option 2: Harness-Specific Setup
+### Option 2: Target Specific Agent Harness
 
-#### 1. Gemini Antigravity
+Pass a harness name (`gemini`, `claude`, `opencode`, `codex`, `cursor`) to limit installation to a single harness:
+
 ```bash
-git clone https://github.com/phoroth/AGENTIC.git
-cd AGENTIC
-./install.sh --target antigravity --profile full
+# Bash
+./install.sh claude
 ```
 
-#### 2. Claude Code
-```text
-/plugin marketplace add https://github.com/phoroth/AGENTIC
-/plugin install agentic@phoroth
-```
-
-#### 3. OpenCode & Codex
-```bash
-bash scripts/sync-agentic-to-codex.sh
+```powershell
+# PowerShell
+.\install.ps1 -Target cursor
 ```
 
 ---
 
-## 🎯 Daily Workflows & Cheat Sheet
+## 📖 Complete Guide & Daily Workflows
 
-| What You Are Doing | Workflow / Command | What Agent / Skill Does |
+### How AGENTIC Works
+Once installed, your AI agent automatically loads matching skill definitions from `skills/` and `plugins/` whenever your task demands domain expertise.
+
+### Common Engineering Workflows
+
+| Task / Scenario | Command or Prompt | What AGENTIC Does |
 | :--- | :--- | :--- |
-| **Planning a New Feature** | `/plan "Add OAuth2 Auth"` | `planner` agent generates structured blueprint and risk assessment |
-| **Test-Driven Feature Build** | `tdd-workflow` | Enforces RED-GREEN-REFACTOR cycle with 80%+ test coverage gate |
-| **Code Review & Quality Check**| `/code-review` | `code-reviewer` performs fresh-context regression & security pass |
-| **Fixing Broken Build** | `/build-fix` | `build-error-resolver` minimally repairs compiler & type errors |
-| **Querying Project Memory** | `graphify query "auth rules"` | Retrieves past architectural choices & decisions from `graph.json` |
-| **Visualizing System State** | `obsidian-vault-sync` | Formats current `implementation_plan.md` into an Obsidian graph node |
-| **Auditing Security & Secrets** | `/security-scan` | `security-reviewer` audits inputs, secrets, and OWASP vulnerabilities |
-
----
-
-## 📖 How to Use Skills & Plugins
-
-Once installed via the one-line installer, your AI agent automatically gains access to all 1,590+ skills and 5 plugin bundles:
-
-1. **Automatic Triggering**:
-   - Skills auto-activate based on your task. For example, if you ask your agent to write a React component, query PubMed, or tune PostgreSQL, the matching skill in `skills/` is loaded automatically into context.
-
-2. **Explicit Skill Invocation**:
-   - You can explicitly prompt your agent to use a specific skill:
-     ```text
-     Use the tdd-workflow skill to implement the auth module.
-     Use the security-review skill to scan this PR.
-     ```
-
-3. **Subagent Delegation**:
-   - Invoke specialized subagents for complex tasks:
-     ```text
-     Delegate architectural design to the planner subagent.
-     Run code-reviewer on the latest commit.
-     ```
+| **Feature Planning** | `/plan "Add OAuth2 Auth"` | `planner` agent generates a structured blueprint, risk analysis, and task graph. |
+| **Test-Driven Build** | `Use tdd-workflow` | Enforces the RED-GREEN-REFACTOR cycle with an 80%+ test coverage requirement. |
+| **Code Review** | `/code-review` | `code-reviewer` agent performs fresh-context security and regression pass. |
+| **Fix Broken Build** | `/build-fix` | `build-error-resolver` minimally repairs compiler and type errors without refactoring architecture. |
+| **Query Memory** | `graphify query "auth rules"` | Retrieves past architectural decisions and invariants from `.agent/graphify-out/graph.json`. |
+| **Obsidian Visualizer** | `obsidian-vault-sync` | Formats current `implementation_plan.md` into Obsidian graph nodes. |
+| **Security Audit** | `/security-scan` | `security-reviewer` scans code for secrets, SSRF, SQLi, and OWASP Top 10 vulnerabilities. |
 
 ---
 
 ## 🧠 Architecture: Token-Agnostic Handoff Protocol (TAHP)
 
-When working on large projects, LLM context windows eventually deplete. **AGENTIC** solves this through **TAHP**:
+When working on complex, multi-day engineering projects, LLM context windows inevitably deplete. **AGENTIC** solves this with **TAHP**:
 
 ```mermaid
 sequenceDiagram
@@ -177,9 +162,19 @@ sequenceDiagram
     Claude->>Claude: Continues execution with 100% historical context continuity
 ```
 
-1. **State Persistence**: Before context resets or when handing off work, the active agent saves decisions to `.agent/graphify-out/graph.json`.
+1. **State Persistence**: Before context resets or when handing off work, the active agent saves state and decisions to `.agent/graphify-out/graph.json`.
 2. **Context Recovery**: The incoming agent queries the graph at startup to immediately acquire complete situational awareness.
-3. **No Lost Work**: Dead ends, attempted fixes, and architecture choices remain permanently indexed.
+3. **Zero Lost Work**: Architecture choices, attempted fixes, and invariants remain permanently indexed.
+
+---
+
+## 🛡️ Security, Governance & AgentShield
+
+**AGENTIC** enforces strict security-by-default standards:
+- **No Hardcoded Secrets**: Scans codebases using AgentShield before commits.
+- **Sanitization Engine**: Guarantees zero leakage of private user data or internal project code during skill exports.
+- **Input & SQL Validation**: Automated checks for OWASP Top 10 vulnerabilities.
+- **Agent Guide**: AI agents reading the repo follow [`AGENTS.md`](AGENTS.md) for strict installation and tool execution protocol.
 
 ---
 
@@ -190,7 +185,7 @@ sequenceDiagram
 | **1,590+ Skill Vault** | ✅ Full | ✅ Full | ✅ Full | ✅ Full | ✅ Full |
 | **Graphify Shared Memory** | ✅ Native | ✅ Native | ✅ Native | ✅ Native | ✅ Native |
 | **Obsidian Vault Sync** | ✅ Native | ✅ Native | ✅ Native | ✅ Native | ✅ Native |
-| **Subagent Delegation** | ✅ 64 Squads | ✅ 64 Squads | ✅ 12 Squads | ✅ AGENTS.md | ✅ Scoped |
+| **Subagent Delegation** | ✅ 67 Squads | ✅ 67 Squads | ✅ 12 Squads | ✅ AGENTS.md | ✅ Scoped |
 | **Automated Verification** | ✅ Hooks | ✅ Plugin Hooks | ✅ Plugin Events | ✅ Git Hooks | ✅ Custom Rules |
 
 ---
@@ -199,51 +194,22 @@ sequenceDiagram
 
 ```text
 AGENTIC/
-├── .agent/                 # Global AGENTIC orchestration manifest & rules
-├── .gemini/                # Antigravity harness adapters & skills
-├── .claude-plugin/         # Claude Code marketplace manifest
-├── .codex/                 # Codex reference roles and configs
-├── .opencode/              # OpenCode plugin, rules, and commands
-├── agents/                 # 64 specialized subagent profiles
+├── skills/                 # 1,590+ domain-specific skills (code, bio, finance, design, security, cloud)
+├── plugins/                # Modular plugin bundles (android-cli, science, devtools, firebase, web, ecc)
 ├── AGENTS.md               # AI agent installation & discovery guide
-├── skills/                 # 1,590+ domain-specific skills (code, bio, finance, design)
-├── commands/               # 84 slash-command shims
-├── graphify/               # Knowledge graph memory engine scripts
-├── obsidian-vault/         # Obsidian sync adapters & templates
-├── scripts/                # Multi-platform installer & sync utilities (Node/Bash/PS1)
-├── tests/                  # Verification suite for skills & memory adapters
-├── install.ps1             # One-click Windows installer
-├── install.sh              # One-click Linux/macOS installer
+├── install.ps1             # Universal PowerShell installer script
+├── install.sh              # Universal Bash installer script
 └── README.md               # Repository documentation
 ```
 
 ---
 
-## 🔒 Security & Governance
-
-**AGENTIC** enforces strict security-by-default standards:
-- **No Hardcoded Secrets**: Scans codebases using AgentShield before commits.
-- **Sanitization Engine**: Guarantees zero leakage of private user data or internal project code during skill exports.
-- **Input & SQL Validation**: Automated checks for OWASP Top 10 vulnerabilities.
-
-To run a local security audit:
-```bash
-npx -y agent-shield scan --path .
-```
-
----
-
-## 🤝 Contributing
+## 🤝 Contributing & License
 
 We welcome contributions! To add new skills, refine subagents, or improve harness sync scripts:
 1. Fork the repository.
 2. Create a feature branch (`git checkout -b feature/new-skill`).
-3. Ensure test coverage passes (`node tests/run-all.js`).
-4. Submit a Pull Request.
-
----
-
-## 📜 License
+3. Submit a Pull Request.
 
 Distributed under the **MIT License**. See `LICENSE` for more information.
 
