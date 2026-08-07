@@ -1,10 +1,15 @@
 #!/bin/bash
 TARGET="${1:-all}"
-TMP_DIR="$HOME/AGENTIC-tmp"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-rm -rf "$TMP_DIR"
-echo "Cloning AGENTIC repository..."
-git clone https://github.com/phoroth/AGENTIC.git "$TMP_DIR"
+if [ -d "$SCRIPT_DIR/skills" ]; then
+    SOURCE_DIR="$SCRIPT_DIR"
+else
+    SOURCE_DIR="$HOME/AGENTIC-tmp"
+    rm -rf "$SOURCE_DIR"
+    echo "Fetching AGENTIC repository..."
+    git clone https://github.com/phoroth/AGENTIC.git "$SOURCE_DIR"
+fi
 
 TARGETS=()
 
@@ -27,9 +32,12 @@ fi
 for dir in "${TARGETS[@]}"; do
     echo " -> Syncing skills & plugins to $dir..."
     mkdir -p "$dir/skills" "$dir/plugins"
-    cp -R "$TMP_DIR/skills/"* "$dir/skills/" 2>/dev/null || true
-    cp -R "$TMP_DIR/plugins/"* "$dir/plugins/" 2>/dev/null || true
+    cp -R "$SOURCE_DIR/skills/"* "$dir/skills/" 2>/dev/null || true
+    cp -R "$SOURCE_DIR/plugins/"* "$dir/plugins/" 2>/dev/null || true
 done
 
-rm -rf "$TMP_DIR"
+if [ "$SOURCE_DIR" = "$HOME/AGENTIC-tmp" ]; then
+    rm -rf "$SOURCE_DIR"
+fi
+
 echo "Installation complete for all AI agent harnesses! Restart your AI agent to load the new skills."

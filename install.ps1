@@ -20,19 +20,29 @@ if ($Target -eq "all" -or $Target -eq "cursor") {
     $targets += "$HOME\.cursor"
 }
 
-Write-Host "Installing AGENTIC Skills to AI Agent configuration paths..."
+Write-Host "Installing AGENTIC Skills & Plugins to AI Agent configuration paths..."
 
-$tmpDir = "$HOME\AGENTIC-tmp"
-if (Test-Path -Path $tmpDir) { Remove-Item -Path $tmpDir -Recurse -Force }
+$scriptDir = $PSScriptRoot
+$sourceDir = ""
 
-git clone https://github.com/phoroth/AGENTIC.git $tmpDir
+if ($scriptDir -and (Test-Path -Path "$scriptDir\skills")) {
+    $sourceDir = $scriptDir
+} else {
+    $sourceDir = "$HOME\AGENTIC-tmp"
+    if (Test-Path -Path $sourceDir) { Remove-Item -Path $sourceDir -Recurse -Force }
+    Write-Host " -> Fetching AGENTIC repository..."
+    git clone https://github.com/phoroth/AGENTIC.git $sourceDir
+}
 
 foreach ($dir in $targets) {
     Write-Host " -> Syncing skills & plugins to $dir..."
     New-Item -ItemType Directory -Force -Path "$dir\skills", "$dir\plugins" | Out-Null
-    Copy-Item -Path "$tmpDir\skills\*" -Destination "$dir\skills" -Recurse -Force
-    Copy-Item -Path "$tmpDir\plugins\*" -Destination "$dir\plugins" -Recurse -Force
+    Copy-Item -Path "$sourceDir\skills\*" -Destination "$dir\skills" -Recurse -Force
+    Copy-Item -Path "$sourceDir\plugins\*" -Destination "$dir\plugins" -Recurse -Force
 }
 
-Remove-Item -Path $tmpDir -Recurse -Force
+if ($sourceDir -eq "$HOME\AGENTIC-tmp") {
+    Remove-Item -Path $sourceDir -Recurse -Force
+}
+
 Write-Host "Installation complete for all AI agent harnesses! Restart your AI agent to load the new skills."

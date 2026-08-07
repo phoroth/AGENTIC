@@ -5,11 +5,11 @@
 
 <p align="center">
   <a href="https://github.com/phoroth/AGENTIC/stargazers"><img src="https://img.shields.io/github/stars/phoroth/AGENTIC?style=for-the-badge&logo=github&color=gold" alt="Stars" /></a>
-  <a href="https://github.com/phoroth/AGENTIC/network/members"><img src="https://img.shields.io/github/forks/phoroth/AGENTIC?style=for-the-badge&logo=github&color=blue" alt="Forks" /></a>
+  <a href="https://github.com/phoroth/AGENTIC/network/members"><img src="https://img.shields.io/github/forks/phoroth/AGENTIC?style=for-the-badge&logo=blue" alt="Forks" /></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge" alt="MIT License" /></a>
   <img src="https://img.shields.io/badge/Skills-1590%2B-orange?style=for-the-badge&logo=powerpages" alt="1590+ Skills" />
   <img src="https://img.shields.io/badge/Subagents-67%20Squads-purple?style=for-the-badge&logo=probot" alt="67 Subagents" />
-  <img src="https://img.shields.io/badge/Plugins-5%20Bundles-blueviolet?style=for-the-badge&logo=package" alt="5 Plugins" />
+  <img src="https://img.shields.io/badge/Plugins-7%20Bundles-blueviolet?style=for-the-badge&logo=package" alt="7 Plugins" />
   <img src="https://img.shields.io/badge/Harness-Universal-green?style=for-the-badge&logo=gnubash" alt="Universal Harness" />
 </p>
 
@@ -30,7 +30,7 @@
 
 **AGENTIC** is the universal agent harness operating system. It upgrades AI coding assistants (**Gemini Antigravity**, **Claude Code**, **OpenCode**, **Codex**, **Cursor**, and **Zed**) from standard snippet generators into autonomous engineering platforms. 
 
-**AGENTIC** equips your agents with **1,590+ domain skills**, **67 specialized subagent squads**, **5 modular plugin bundles**, continuous memory persistence (**Graphify v2**), test-driven development (TDD) gates, security scanners (**AgentShield**), and living architecture maps (**Obsidian Vault Sync**).
+**AGENTIC** equips your agents with **1,590+ domain skills**, **67 specialized subagent squads**, **7 modular plugin bundles**, continuous memory persistence (**Graphify v2**), test-driven development (TDD) gates, security scanners (**AgentShield**), and living architecture maps (**Obsidian Vault Sync**).
 
 ```text
 ┌────────┐     ┌────────┐     ┌───────────┐     ┌────────┐     ┌────────┐     ┌──────────┐     ┌──────┐     ┌────────┐
@@ -94,7 +94,7 @@ Every complex development task executed by an AGENTIC-enabled agent follows a de
 | :--- | ---: | :--- |
 | **Specialized Skills** | **1,590+ Skills** | Domain-specific instructions for TDD, security audits, database tuning, genomics, trading systems, UI design, performance engineering, cloud infrastructure, AI/ML pipelines |
 | **Subagent Squads** | **67 Subagents** | Scoped background workers for architectural planning (`planner`), code reviews (`code-reviewer`), build repair (`build-error-resolver`), database optimization (`database-reviewer`), etc. |
-| **Plugin Bundles** | **5 Plugins** | Modular plugin bundles for Android CLI, Science tools, DevTools, Firebase, Web Guidance, and AGENTIC Core |
+| **Plugin Bundles** | **7 Plugins** | Modular plugin bundles for Android CLI, Science tools, DevTools, Firebase, Web Guidance, Google Antigravity SDK, and AGENTIC Core |
 | **Shared Memory Engine** | **Graphify v2** | Knowledge graph engine enabling token-agnostic state persistence between LLMs |
 | **Visual Architecture** | **Obsidian Vault** | Automated sync of implementation plans & task graphs to local Obsidian vaults |
 | **Slash Commands** | **93 Commands** | Fast-path shortcuts (`/plan`, `/build-fix`, `/code-review`, `/security-scan`) |
@@ -104,7 +104,7 @@ Every complex development task executed by an AGENTIC-enabled agent follows a de
 
 ## 🔌 Included Plugin Bundles
 
-**AGENTIC** includes 5 specialized plugin bundles stored in `plugins/`:
+**AGENTIC** includes 7 specialized plugin bundles stored in `plugins/`:
 
 | Plugin Bundle | Directory Path | Core Capabilities & Integrated Tooling |
 | :--- | :--- | :--- |
@@ -114,6 +114,7 @@ Every complex development task executed by an AGENTIC-enabled agent follows a de
 | **Chrome DevTools** | `plugins/chrome-devtools-plugin` | Browser automation, visual testing, DOM inspection, network activity profiling & devtools performance debugging. |
 | **Firebase Tools** | `plugins/firebase` | Firestore schema management, Firebase Auth, Cloud Functions deployment & hosting operations. |
 | **Modern Web Guidance** | `plugins/modern-web-guidance-plugin` | Next.js App Router, React 19, Tailwind v4, Vite, Web Vitals & performance optimization guidelines. |
+| **Google Antigravity SDK** | `plugins/google-antigravity-sdk` | Autonomous AI agent creation, multi-agent orchestrations, custom tool construction, and Antigravity workflow definitions. |
 
 ---
 
